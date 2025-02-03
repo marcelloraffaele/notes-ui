@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+//import './App.css';
+import Note from './components/Note';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -38,6 +39,7 @@ function App() {
       const res = await fetch(`http://localhost:8080/notes/${note.id}`, {
         method: 'DELETE'
       });
+      console.log(res);
       if (res.ok) {
         fetchNotes();
       } else {
@@ -101,7 +103,8 @@ function App() {
   };
 
   return (
-    <div className="App container">
+    <div className="container">
+      
       <header className="App-header">
         <h1>Notes App</h1>
         
@@ -170,38 +173,15 @@ function App() {
               />
             </div>
             <button type="submit" className="btn btn-success mt-2">
-              {editingNote ? "Update Note" : "Submit Note"}
+              {editingNote ? "Update Note" : "Add Note"}
             </button>
           </form>
         )}
-        {/* Updated notes list rendering using Bootstrap panel */}
+        <br/>
+        <br/>
         {notes.map(note => (
-          <div key={note.id} className="panel panel-default">
-            <div className="panel-heading">
-		          <h3 className="panel-title">
-                {note.title}
-                
-		          </h3>
-            </div>
-            <div className="panel-body">
-              {note.content}
-              <br />
-              <span className="pull-right">
-                  <button 
-                    className="btn btn-warning btn-xs" 
-                    onClick={() => handleEdit(note)}
-                  >
-                    Modify
-                  </button>
-                  <button 
-                    className="btn btn-danger btn-xs ml-1" 
-                    onClick={() => handleDelete(note)}
-                  >
-                    Delete
-                  </button>
-                </span>
-            </div>
-          </div>
+          
+          <Note key={note.id} {...{note, handleEdit, handleDelete }} />
         ))}
       </header>
     </div>
