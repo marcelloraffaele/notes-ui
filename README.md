@@ -53,3 +53,6 @@ export default tseslint.config({
 npm create vite@latest
 npm install
 npm run dev
+
+
+https://tailwindcss.com/docs/installation/using-vite
