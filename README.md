@@ -1,4 +1,24 @@
-# React + TypeScript + Vite
+# Note UI
+Note UI is a simple note-taking application built with React, TypeScript, and Tailwind CSS. It allows users to create, edit, and delete notes with ease.
+
+## Dev details
+### How it was created
+```bash
+npm create vite@latest
+npm install
+```
+
+### How to run
+```bash
+npm run dev
+```
+
+### Useful links
+- [Tailwind CSS Installation](https://tailwindcss.com/docs/installation/using-vite)
+- [Tailwind Flex Feature Showcase](https://tailwindflex.com/@alok/feature-showcase)
+
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -49,12 +69,3 @@ export default tseslint.config({
 })
 ```
 
-
-npm create vite@latest
-npm install
-npm run dev
-
-
-https://tailwindcss.com/docs/installation/using-vite
-
-https://tailwindflex.com/@alok/feature-showcase
