@@ -31,7 +31,7 @@ const AddNote: React.FC<AddNoteProps> = ({ onAdd }) => {
       />
       <button
         onClick={handleAddNote}
-        className="bg-yellow-500 text-white p-2 rounded-lg"
+        className="mx-auto block rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white hover:bg-fuchsia-500 focus:outline-none"
       >
         Add Note
       </button>

@@ -1,21 +1,22 @@
 import React from 'react';
-import Note from './Note';
+import NoteComponent from './NoteComponent';
+import { Note } from '../types/Note';
 
 interface NoteListProps {
-  notes: { title: string; content: string }[];
+  notes: Note[];
 }
 
 const NoteList: React.FC<NoteListProps> = ({ notes }) => {
   return (
     <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
         <h2 className="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Note list</h2>
-        <div className="w-full">
-            <div className="flex flex-col w-full mb-10 sm:flex-row">
+        
+            <div className="grid gap-2 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {notes.map((note, index) => (
-                <Note key={index} title={note.title} content={note.content} />
+                <NoteComponent id={note.id} title={note.title} content={note.content} labels={note.labels} />
             ))}
             </div>
-        </div>
+        
     </div>
     
   );
