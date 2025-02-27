@@ -13,6 +13,15 @@ npm install
 npm run dev
 ```
 
+### How to Docker build
+```bash
+# Build the image
+docker build -t notes-ui .
+
+# Run the container
+docker run -p 8081:80 notes-ui
+```
+
 ### Useful links
 - [Tailwind CSS Installation](https://tailwindcss.com/docs/installation/using-vite)
 - [Tailwind Flex Feature Showcase](https://tailwindflex.com/@alok/feature-showcase)
