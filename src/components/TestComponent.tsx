@@ -1,5 +1,4 @@
 import React from 'react';
-import Note from './NoteComponent';
 
 const TestComponent : React.FC = () => {
   return (

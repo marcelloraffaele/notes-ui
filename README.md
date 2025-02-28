@@ -19,7 +19,7 @@ npm run dev
 docker build -t notes-ui .
 
 # Run the container
-docker run -p 8081:80 notes-ui
+docker run -p 8081:80 -e VITE_API_URL=http://localhost:8080 notes-ui
 ```
 
 ### Useful links

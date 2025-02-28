@@ -12,7 +12,7 @@ const NoteList: React.FC<NoteListProps> = ({ notes }) => {
         <h2 className="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Note list</h2>
         
             <div className="grid gap-2 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-            {notes.map((note, index) => (
+            {notes.map((note /*, index*/) => (
                 <NoteComponent id={note.id} title={note.title} content={note.content} labels={note.labels} />
             ))}
             </div>
