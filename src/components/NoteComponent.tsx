@@ -4,12 +4,13 @@ import { Note } from '../types/Note';
 
 const NoteComponent: React.FC<Note> = ({ title, content, labels /*, urls, color*/ }) => {
   return (
-    <div className="relative h-full p-5 bg-yellow-100 border-2 border-yellow-200 rounded-lg">
-      <div className="flex">
-        <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">{title}</h3>
+    <div className="relative h-full p-5 bg-yellow-100 border-2 border-yellow-200 rounded-lg shadow-md">
+      <div>
+        <h1 className="text-gray-900 mt-2">{title}</h1>
+        <p className="text-gray-600 mt-2 text-sm text-left">{content}</p>
       </div>
       
-      <p className="text-gray-600">{content}</p>
+      
       
       {labels && labels.length > 0 && (
         <div className="flex flex-wrap gap-1 mt-2">

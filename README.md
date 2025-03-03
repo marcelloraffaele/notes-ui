@@ -18,8 +18,11 @@ npm run dev
 # Build the image
 docker build -t notes-ui .
 
-# Run the container
+# Run the UI container
 docker run -p 8081:80 -e REACT_APP_API_URL=http://localhost:8080 notes-ui
+
+# Run the API container
+docker run -p 8080:8080 ghcr.io/marcelloraffaele/notes-api:latest
 ```
 
 ### Useful links
