@@ -12,6 +12,10 @@ permissions:
   packages: write
   contents: read
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build-test:
     runs-on: ubuntu-latest
